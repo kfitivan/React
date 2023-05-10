@@ -1,6 +1,7 @@
 import "./Navbarstyles.css";
 import react, { Component } from "react";
-import { menuitems } from "menuitems";
+import { menuitems } from "./menuitems";
+import { Link } from "react-router-dom";
 class Navbar extends Component {
   //declare the state of harmburg icon on click
   state = { clicked: false };
@@ -20,9 +21,10 @@ class Navbar extends Component {
           {menuitems.map((items, index) => {
             return (
               <li key="index">
-                <a className={items.cName} href={items.url}>
+                <Link className={items.cName} to={items.url}>
+                  <i class={items.icon}></i>
                   {items.title}
-                </a>
+                </Link>
               </li>
             );
           })}
