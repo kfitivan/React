@@ -1,14 +1,16 @@
 import "./Herostyles.css";
 
-function Hero() {
+function Hero(props) {
   return (
     <>
-      <div className="hero">
-        <img alt="heroimage" src="./assets/img3.jpg" />
+      <div className={props.cName}>
+        <img alt="heroimage" src={props.heroImg} />
         <div className="hero-text">
-          <h1>Your Journey Your Story</h1>
-          <p>Choose Your Favourite Destination</p>
-          <a href="/">Travel Plan</a>
+          <h1>{props.title}</h1>
+          <p>{props.text}</p>
+          <a href={props.url} className={props.btnClass}>
+            {props.buttonText}
+          </a>
         </div>
       </div>
     </>
