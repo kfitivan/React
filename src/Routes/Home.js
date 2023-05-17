@@ -2,6 +2,8 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import HomeImg from "../assets/img5.jpg";
 import Destination from "./Components/Destination";
+import Trip from "./Components/Trip";
+import Footer from "./Components/Footer";
 
 function Home() {
   return (
@@ -17,6 +19,8 @@ function Home() {
         btnClass="show"
       />
       <Destination />
+      <Trip />
+      <Footer />
     </>
   );
 }
